@@ -1,6 +1,13 @@
 <h2>Add New Author</h2>
 
 <%= form_for @author do |f| %>
+  <!-- Check for errors -->
+  <% if @author.errors.any? %>
+    <% @author.errors.full_messages.each do |msg| %>
+      <!-- Show errors -->
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
 
   <div class="form-group">
     <%= f.label :first_name %><br>
