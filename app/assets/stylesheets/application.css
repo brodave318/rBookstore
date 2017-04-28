@@ -68,7 +68,7 @@ footer {
 }
 
 .books-show-right {
-  float: right;
+  float: left;
   width: 60%;
   margin-top: 10px;
 }
