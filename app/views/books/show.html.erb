@@ -1,22 +1,22 @@
 <div id="books-show">
-  <h2>Ruby On Rails Power</h2>
+  <h2><%= @book.title %></h2>
   <div class="books-show-left">
-    <%= image_tag('covers/ruby_on_rails_power.jpg') %>
+    <%= image_tag(@book.coverpath) %>
   </div>
   <div class="books-show-right">
     <h3>Book info:</h3>
     <ul>
-      <li><strong>Category:</strong> Ruby On Rails</li>
-      <li><strong>Author:</strong> Areesha Bakharia</li>
-      <li><strong>Publisher:</strong> Course Technology PTR</li>
-      <li><strong>Year:</strong> 2007</li>
-      <li><strong>ISBN:</strong> 1598632167</li>
-      <li><strong>Format:</strong> Paperback</li>
-      <li><strong>Pages:</strong> 678</li>
+      <li><strong>Category:</strong> <%= @book.category.name %></li>
+      <li><strong>Author:</strong> <%= @book.author.first_name %> <%= @book.author.last_name %></li>
+      <li><strong>Publisher:</strong> <%= @book.publisher.name %></li>
+      <li><strong>Year:</strong> <%= @book.year %></li>
+      <li><strong>ISBN:</strong> <%= @book.isbn %></li>
+      <li><strong>Format:</strong> <%= @book.format %></li>
+      <li><strong>Pages:</strong> <%= @book.pages %></li>
     </ul>
-    <%= link_to "Buy for $5.18", 'http://www.ebay.com/itm/Ruby-on-Rails-Power-The-Comprehensive-Guide-Power-/272638154373?hash=item3f7a801685:g:GVoAAOSwOgdYv4Cz', class: 'btn btn-success', target: '_blank' %>
+    <%= link_to "Buy for " + @book.price, @book.buy, class: 'btn btn-success', target: '_blank' %>
   </div>
   <div class="clearfix"></div>
   <h4>Excerpt</h4>
-  <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+  <p><%= @book.excerpt %>.</p>
 </div>
