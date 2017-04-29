@@ -19,4 +19,7 @@
   <div class="clearfix"></div>
   <h4>Excerpt</h4>
   <p><%= @book.excerpt %>.</p>
+
+  <h3>Admin Function</h3>
+  <%= link_to "Edit", edit_book_path(@book.id) %> | <%= link_to "Delete", book_path(@book), method: :delete, data: {confirm: 'Are you sure?'} %>
 </div>
