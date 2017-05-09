@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Building a Bookstore from the course 'Learn Ruby on Rails by Building Projects' by Eduonix Learning Solutions -- Stackskills
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+What I will learn in this project:
+* Rails application setup
+* MySQL database integration
+* MVC framework fundamentals
+* CRUD operations in Rails
+* Layouts with Bootstrap
+* RESTful routing
